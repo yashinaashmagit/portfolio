@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aashma Yashin | Email Developer & Marketing Automation Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5fa;--panel:#fff;--ink:#16213e;--mute:#55607a;--line:#d8deea;--brand:#2f3fa0;--brand-ink:#fff;--hi:#f2b134;--ok:#0e8a7d;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10162b;--panel:#182041;--ink:#eef1fa;--mute:#a3adc9;--line:#2b3560;--brand:#8e9bff;--brand-ink:#10162b}}
+:root[data-theme="dark"]{--bg:#10162b;--panel:#182041;--ink:#eef1fa;--mute:#a3adc9;--line:#2b3560;--brand:#8e9bff;--brand-ink:#10162b}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,sans-serif;line-height:1.1;margin:0}
+a{color:var(--brand)}
+:focus-visible{outline:3px solid var(--hi);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}
+header.nav b{font-family:"Bricolage Grotesque";font-size:1.15rem}
+nav a{margin-left:18px;text-decoration:none;color:var(--mute);font-weight:500}
+nav a:hover{color:var(--ink)}
+button{font:inherit;cursor:pointer}
+.theme{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 14px;margin-left:18px}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:42px;align-items:center;padding:40px 0 70px}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.1rem);font-weight:800;letter-spacing:-.02em}
+.hero p.lead{font-size:1.15rem;color:var(--mute);max-width:34em;margin:20px 0 26px}
+.cta{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:500;margin:0 10px 10px 0;border:0}
+.cta.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:18px}
+.stats div{font-size:.95rem;color:var(--mute)}
+.stats b{display:block;font:800 1.9rem "Bricolage Grotesque";color:var(--ink)}
+/* email lab */
+.lab{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px}
+.lab h2{font-size:1.1rem;margin-bottom:4px}
+.lab small{color:var(--mute)}
+.ctrl{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.ctrl button{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:8px;padding:6px 12px;font-size:.9rem}
+.ctrl button[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.stage{background:repeating-linear-gradient(45deg,transparent 0 10px,rgba(120,130,170,.07) 10px 20px);border-radius:12px;padding:16px;display:flex;justify-content:center;min-height:360px}
+.mail{width:100%;max-width:560px;background:#fff;color:#222;border-radius:8px;overflow:hidden;font:15px/1.5 Arial,sans-serif;transition:max-width .35s}
+.mail.mobile{max-width:300px}
+.mail.dark{background:#1b1d29;color:#e8e9f2}
+.mail .bar{background:#2f3fa0;color:#fff;padding:14px 18px;font-weight:bold}
+.mail.dark .bar{background:#3b4ac0}
+.mail .img{height:130px;background:linear-gradient(135deg,#f2b134,#e8704a);display:flex;align-items:center;justify-content:center;color:#16213e;font-weight:bold;text-align:center;padding:10px}
+.mail.noimg .img{background:#e9e9ef;color:#16213e;font-weight:normal;font-style:italic;border:1px dashed #999}
+.mail.dark.noimg .img{background:#2a2d3f;color:#e8e9f2}
+.mail .body{padding:18px}
+.mail h3{font:bold 20px Arial;margin:0 0 8px}
+.mail .btn{display:inline-block;background:#0e8a7d;color:#fff;padding:11px 20px;border-radius:6px;text-decoration:none;font-weight:bold;margin-top:8px}
+.mail.mobile .btn{display:block;text-align:center}
+.mail .foot{padding:12px 18px;font-size:12px;opacity:.7;border-top:1px solid rgba(128,128,128,.3)}
+.checks{margin-top:10px;font-size:.88rem;color:var(--mute);min-height:2.6em}
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.8rem,3.6vw,2.5rem);margin-bottom:8px}
+.sub{color:var(--mute);max-width:40em;margin:0 0 26px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tabs button{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:9px 16px;text-align:left}
+.tabs button[aria-selected="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.role{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
+.role h3{font-size:1.5rem}
+.role .when{color:var(--mute);margin:4px 0 14px}
+.role ul{margin:0;padding-left:1.1em}
+.role li{margin:8px 0;max-width:62ch}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.chips button{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:6px 14px}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.skills span{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-weight:500;transition:opacity .2s}
+.skills span.off{opacity:.2}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.cert{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--ok);border-radius:12px;padding:16px}
+.cert b{font-family:"Bricolage Grotesque";font-size:1.05rem;display:block}
+.cert span{color:var(--mute);font-size:.9rem}
+.cert.adobe{border-left-color:#e8704a}.cert.hub{border-left-color:var(--hi)}
+footer{padding:40px 0 60px;color:var(--mute)}
+@media(max-width:820px){.hero{grid-template-columns:1fr}nav{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <header class="nav"><b>Aashma Yashin</b>
+  <div><nav style="display:inline"><a href="#work">Experience</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a href="#contact">Contact</a></nav>
+  <button class="theme" id="theme" aria-label="Toggle light or dark theme">Theme</button></div></header>
+
+ <div class="hero">
+  <div>
+   <h1>Emails that render right in every inbox.</h1>
+   <p class="lead">I'm an Email Developer and Marketing Automation Specialist with 10+ years of experience building responsive, accessible campaigns in HubSpot, Marketo, Adobe Journey Optimizer and Knak.</p>
+   <a class="cta" href="#contact">Work with me</a><a class="cta alt" href="#work">See my experience</a>
+   <div class="stats"><div><b>10+</b>years building email</div><div><b>4</b>Adobe certifications</div><div><b>WCAG</b>accessibility-first QA</div></div>
+  </div>
+  <div class="lab" aria-labelledby="labh">
+   <h2 id="labh">Try the email QA lab</h2><small>One email, tested the way I test every campaign.</small>
+   <div class="ctrl" role="group" aria-label="Preview options">
+    <button data-k="mobile" aria-pressed="false">Mobile width</button>
+    <button data-k="dark" aria-pressed="false">Dark mode</button>
+    <button data-k="noimg" aria-pressed="false">Images blocked</button>
+   </div>
+   <div class="stage"><div class="mail" id="mail">
+     <div class="bar">Harbor Homes</div>
+     <div class="img" id="hero-img" role="img" aria-label="Sunlit living room with a for-sale sign">Open house this Saturday</div>
+     <div class="body"><h3>Your new neighbourhood is waiting</h3><p>Three homes just listed near you. Book a tour before Sunday.</p><a class="btn" href="#" onclick="return false">Book a tour</a></div>
+     <div class="foot">You received this because you subscribed. Unsubscribe</div>
+   </div></div>
+   <div class="checks" id="checks" aria-live="polite"></div>
+  </div>
+ </div>
+</div>
+
+<section id="work"><div class="wrap">
+ <h2>Experience</h2><p class="sub">Select a role to see what I delivered.</p>
+ <div class="tabs" role="tablist" id="tabs"></div>
+ <div class="role" id="role" role="tabpanel"></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+ <h2>Skills</h2><p class="sub">Filter by what you are hiring for.</p>
+ <div class="chips" id="chips"></div>
+ <div class="skills" id="skills-grid"></div>
+</div></section>
+
+<section id="certs"><div class="wrap">
+ <h2>Certifications</h2><p class="sub">Platform certifications across HubSpot and Adobe.</p>
+ <div class="certs">
+  <div class="cert hub"><b>HubSpot Email Marketing Software</b><span>HubSpot</span></div>
+  <div class="cert adobe"><b>Adobe Journey Optimizer for Developers, Expert</b><span>Adobe</span></div>
+  <div class="cert adobe"><b>Adobe Journey Optimizer Foundations</b><span>Adobe</span></div>
+  <div class="cert adobe"><b>Adobe Marketo Engage Foundations</b><span>Adobe</span></div>
+  <div class="cert adobe"><b>Adobe GenStudio for Performance Marketing Foundations</b><span>Adobe</span></div>
+  <div class="cert adobe"><b>Adobe Firefly Custom Models and Services Foundations</b><span>Course completed</span></div>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+ <h2>Let's talk</h2>
+ <p class="sub">I'm open to remote and hybrid Email Developer, Marketing Automation, HubSpot and Marketo roles in India.</p>
+ <div id="links"></div>
+ <p style="color:var(--mute);margin-top:18px">Education: MCA, INMANTEC Institute, Ghaziabad. B.Sc., Bundelkhand University, Jhansi.</p>
+</div></section>
+<footer><div class="wrap">© Aashma Yashin</div></footer>
+
+<script>
+// Fill these in to show contact buttons.
+var CONTACT={email:"",linkedin:""};
+
+var ROLES=[
+ {t:"KPRS Real Estate LLC",r:"Senior Email/Campaign Developer (Freelance)",w:"Mar 2025 to present",b:[
+  "Build and QA responsive campaign emails for real estate marketing programs.",
+  "Develop templates and automation workflows across HubSpot, Marketo and Mailchimp.",
+  "Test across clients and devices with Litmus, covering dark mode and accessibility.",
+  "Use AI tools such as Claude, ChatGPT, Adobe Firefly and HubSpot AI to speed up copy and asset production."]},
+ {t:"Accenture",r:"Senior Developer / Module Lead",w:"5-year engagement, TVC at Google India",b:[
+  "Led a module team delivering email and web campaigns for a global technology client.",
+  "Built template systems in Twig, FreeMarker and Jinja for scalable, personalised sends.",
+  "Set QA and accessibility standards for cross-client compatibility.",
+  "Worked in Jira and Azure DevOps with Git-based version control."]},
+ {t:"UI / Web Developer roles",r:"HCL Info Systems, E-Solutions IT Services, IAP Company Ltd., Uniserve Data Technologies",w:"2009 to 2014",b:[
+  "Built front ends with HTML, CSS, JavaScript, jQuery and Bootstrap.",
+  "Worked on SharePoint / ASP.NET and MySQL-backed web applications.",
+  "Delivered projects for enterprise and government clients, including a DRDO engagement."]}
+];
+var SK={
+ "Email development":["HTML","CSS","Responsive email","Cross-client compatibility","Litmus","Email QA","Accessibility (WCAG)","Knak","Mailchimp"],
+ "Marketing automation":["HubSpot","Marketo","Adobe Journey Optimizer","Campaign automation","Adobe GenStudio"],
+ "Web and code":["JavaScript","TypeScript","React.js","Next.js","Bootstrap","jQuery","SQL","MySQL","Twig","FreeMarker","Jinja"],
+ "Tools and AI":["Git","Jira","Azure DevOps","Figma","Canva","Claude","ChatGPT","Adobe Firefly","HubSpot AI","Gemini"]
+};
+var $=function(s){return document.querySelector(s)};
+
+// theme
+$("#theme").onclick=function(){var d=document.documentElement,cur=d.getAttribute("data-theme");
+ if(!cur)cur=matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";
+ d.setAttribute("data-theme",cur==="dark"?"light":"dark")};
+
+// email lab
+var NOTES={mobile:"Single column, full-width button for easy tapping.",dark:"Colours stay readable with enough contrast in dark mode.",noimg:"Alt text keeps the message clear when images are blocked."};
+var st={mobile:false,dark:false,noimg:false};
+function lab(){var m=$("#mail");
+ ["mobile","dark","noimg"].forEach(function(k){m.classList.toggle(k,st[k])});
+ $("#hero-img").textContent=st.noimg?"Alt text: Sunlit living room with a for-sale sign":"Open house this Saturday";
+ var on=Object.keys(st).filter(function(k){return st[k]}).map(function(k){return NOTES[k]});
+ $("#checks").textContent=on.length?on.join(" "):"Desktop view, light mode, images on. Switch the options above to stress-test it."}
+document.querySelectorAll(".ctrl button").forEach(function(b){b.onclick=function(){var k=b.dataset.k;st[k]=!st[k];b.setAttribute("aria-pressed",st[k]);lab()}});
+lab();
+
+// experience tabs
+var tabs=$("#tabs");
+function showRole(i){
+ tabs.querySelectorAll("button").forEach(function(b,j){b.setAttribute("aria-selected",i===j)});
+ var r=ROLES[i];
+ $("#role").innerHTML="<h3></h3><div class='when'></div><ul></ul>";
+ $("#role h3").textContent=r.r;
+ $("#role .when").textContent=r.t+" | "+r.w;
+ r.b.forEach(function(x){var li=document.createElement("li");li.textContent=x;$("#role ul").appendChild(li)})}
+ROLES.forEach(function(r,i){var b=document.createElement("button");b.setAttribute("role","tab");b.textContent=r.t;b.onclick=function(){showRole(i)};tabs.appendChild(b)});
+showRole(0);
+
+// skills
+var cur="All",chips=$("#chips"),grid=$("#skills-grid");
+Object.keys(SK).forEach(function(g){SK[g].forEach(function(s){var e=document.createElement("span");e.textContent=s;e.dataset.g=g;grid.appendChild(e)})});
+function filt(){chips.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-pressed",b.textContent===cur)});
+ grid.querySelectorAll("span").forEach(function(e){e.classList.toggle("off",cur!=="All"&&e.dataset.g!==cur)})}
+["All"].concat(Object.keys(SK)).forEach(function(g){var b=document.createElement("button");b.textContent=g;b.onclick=function(){cur=g;filt()};chips.appendChild(b)});
+filt();
+
+// contact
+var L=$("#links");
+if(CONTACT.email){var a=document.createElement("a");a.className="cta";a.href="mailto:"+CONTACT.email;a.textContent="Email me";L.appendChild(a)}
+if(CONTACT.linkedin){var l=document.createElement("a");l.className="cta alt";l.href=CONTACT.linkedin;l.textContent="LinkedIn";L.appendChild(l)}
+if(!CONTACT.email&&!CONTACT.linkedin)L.innerHTML="<p style='color:var(--mute)'>Contact details available on request.</p>";
+</script>
+</body>
+</html>
